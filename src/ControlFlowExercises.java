@@ -1,26 +1,30 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
 
-    public static void main(String[] args) {
-        // Fizzbuzz
-        //
-        // One of the most common interview questions for entry-level programmers is the FizzBuzz test.
-        // Developed by Imran Ghory, the test is designed to assess basic looping and conditional logic skills.
-        //
-        // Write a program that prints the numbers from 1 to 100.
-        // For multiples of three: print “Fizz” instead of the number.
-        // For the multiples of five: print “Buzz”.
-        // For numbers which are multiples of both three and five: print “FizzBuzz”.
-        for (int i = 0; i <= 100; i++) {
-            if (i % 3 == 0 && i % 5 == 0) {
-                System.out.println("FizzBuzz");
-                continue;
-            } else if (i % 3 == 0) {
-                System.out.println("Fizz");
-                continue;
-            } else if (i % 5 == 0) {
-                System.out.println("Buzz");
-            }
-            System.out.println(i);
+    public static void table(int num) {
+        System.out.println();
+        System.out.println("Here is your table!");
+        System.out.println();
+        System.out.println("number | squared | cubed");
+        System.out.println("------ | ------- | -----");
+        for (int i = 1; i <= num; i++) {
+            System.out.printf("%d\t   | %d\t     | %d\t\n", i, i * i, i * i * i);
         }
+    }
+
+    public static void main(String[] args) {
+        // Display a table of powers.
+        //
+        // Prompt the user to enter an integer.
+        // Display a table of squares and cubes from 1 to the value entered.
+        // Ask if the user wants to continue.
+        // Assume that the user will enter valid data.
+        // Only continue if the user agrees to.
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter an integer: ");
+        int userNum = sc.nextInt();
+        table(userNum);
     }
 }
