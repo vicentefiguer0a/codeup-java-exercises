@@ -44,6 +44,8 @@ public class ControlFlowExercises {
 
             if (userContinue.equalsIgnoreCase("y")) {
                 keepGoing = true;
+            } else {
+                keepGoing = false;
             }
         } while (keepGoing);
     }
