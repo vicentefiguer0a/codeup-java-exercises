@@ -7,11 +7,11 @@ public class MethodsExercises {
         Scanner sc = new Scanner(System.in);
 
         // Basic Arithmetic
-//        System.out.printf("%d%n", add(4, 4));
-//        System.out.printf("%d%n", subtract(10, 5));
-//        System.out.printf("%d%n", multiply(5, 4));
-//        System.out.printf("%d%n", divide(10, 2));
-//        System.out.printf("%d%n", modulus(10, 4));
+        System.out.printf("%d%n", add(4, 4));
+        System.out.printf("%d%n", subtract(10, 5));
+        System.out.printf("%d%n", multiply(5, 4));
+        System.out.printf("%d%n", divide(10, 2));
+        System.out.printf("%d%n", modulus(10, 4));
 
         // Calculate the factorial of a number.
         boolean userContinue = false;
@@ -43,31 +43,31 @@ public class MethodsExercises {
         // Use static methods to implement the method(s) that generate the random numbers.
         // Use the .random method of the java.lang.Math class to generate random numbers.
 
-//        do {
-//            System.out.print("Enter the number of sides you want for a pair of dice: ");
-//            int sides = sc.nextInt();
-//            System.out.print("Roll dice? [y / n]: ");
-//            sc.nextLine();
-//            String roll = sc.nextLine();
-//            if (roll.equalsIgnoreCase("y") || roll.equalsIgnoreCase("yes")) {
-//                userContinue = true;
-//                System.out.printf("Dice 1: %d%n", (int)(Math.floor(Math.random() * (sides - 1 + 1) + 1)));
-//                System.out.printf("Dice 2: %d%n", (int)(Math.floor(Math.random() * (sides - 1 + 1) + 1)));
-//                System.out.print("Would you like to continue? [y / n]: ");
-//                String diceContinue = sc.nextLine();
-//                if (diceContinue.equalsIgnoreCase("y") || diceContinue.equalsIgnoreCase("yes")) {
-//                    userContinue = true;
-//                } else if (diceContinue.equalsIgnoreCase("n") || diceContinue.equalsIgnoreCase("no")) {
-//                    System.out.println("Come again.");
-//                    userContinue = false;
-//                }
-//            } else if (roll.equalsIgnoreCase("n") || roll.equalsIgnoreCase("no")) {
-//                userContinue = false;
-//                System.out.println("Then why did you choose the number of sides for your dice if you're not gonna roll?");
-//                System.out.println("Exiting...");
-//                System.exit(0);
-//            }
-//        } while (userContinue);
+        do {
+            System.out.print("Enter the number of sides you want for a pair of dice: ");
+            int sides = sc.nextInt();
+            System.out.print("Roll dice? [y / n]: ");
+            sc.nextLine();
+            String roll = sc.nextLine();
+            if (roll.equalsIgnoreCase("y") || roll.equalsIgnoreCase("yes")) {
+                userContinue = true;
+                System.out.printf("Dice 1: %d%n", (int)(Math.floor(Math.random() * (sides - 1 + 1) + 1)));
+                System.out.printf("Dice 2: %d%n", (int)(Math.floor(Math.random() * (sides - 1 + 1) + 1)));
+                System.out.print("Would you like to continue? [y / n]: ");
+                String diceContinue = sc.nextLine();
+                if (diceContinue.equalsIgnoreCase("y") || diceContinue.equalsIgnoreCase("yes")) {
+                    userContinue = true;
+                } else if (diceContinue.equalsIgnoreCase("n") || diceContinue.equalsIgnoreCase("no")) {
+                    System.out.println("Come again.");
+                    userContinue = false;
+                }
+            } else if (roll.equalsIgnoreCase("n") || roll.equalsIgnoreCase("no")) {
+                userContinue = false;
+                System.out.println("Then why did you choose the number of sides for your dice if you're not gonna roll?");
+                System.out.println("Exiting...");
+                System.exit(0);
+            }
+        } while (userContinue);
     }
 
     // Create method that adds two numbers.
