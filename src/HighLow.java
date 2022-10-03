@@ -16,27 +16,35 @@ public class HighLow {
 
         int gameNum = (int)(Math.floor(Math.random() * (100 - 1 + 1) + 1));
         boolean notGuessed = true;
-        System.out.println(gameNum);
+        int count = 0;
 
-        System.out.println(" ------------------------");
-        System.out.println("|                        |");
-        System.out.println("|                        |");
-        System.out.println("|    Guess My Number     |");
-        System.out.println("|                        |");
-        System.out.println("|       Made by: Vicente |");
-        System.out.println(" ------------------------");
+        System.out.println(" -------------------------------------------");
+        System.out.println("|                                           |");
+        System.out.println("|                                           |");
+        System.out.println("|             Guess My Number               |");
+        System.out.println("|                                           |");
+        System.out.println("| Rules:                                    |");
+        System.out.println("| 1. You only get 10 guesses.               |");
+        System.out.println("| 2. Have fun.                              |");
+        System.out.println(" -------------------------------------------");
         System.out.println();
 
         do {
+            System.out.printf("Number of guesses: %d%n", count);
             System.out.print("Guess my number: ");
             int userGuess = sc.nextInt();
             if (userGuess == gameNum) {
                 System.out.println("GOOD GUESS!");
                 notGuessed = false;
+            } else if (count > 9) {
+                System.out.println("Guessing limit has been reached.\nYOU LOST.");
+                notGuessed = false;
             } else if (userGuess > gameNum) {
+                count++;
                 System.out.println("LOWER");
             } else if (userGuess < gameNum) {
                 System.out.println("HIGHER");
+                count++;
             }
         } while (notGuessed);
     }
