@@ -3,6 +3,9 @@ import java.util.Scanner;
 public class Person {
 
     private String name;
+    public Person(String name) {
+        this.name = name;
+    }
 
     public String getName(){
         //TODO: return the person's name
@@ -13,14 +16,11 @@ public class Person {
         //TODO: change the name field to the passed value
         this.name = name;
     }
-    public void sayHello(){
+    public String sayHello(){
         //TODO: print a message to the console using the person's name
-        System.out.printf("Hello %s.", this.name);
+        return "Hello " + this.name;
     }
 
-    public Person(String name) {
-        this.name = name;
-    }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
