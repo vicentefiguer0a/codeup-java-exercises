@@ -2,11 +2,11 @@ package shapes;
 
 public class Rectangle {
 
-    protected int length;
-    protected int width;
+    protected double length;
+    protected double width;
 
     // Constructor
-    public Rectangle(int length, int width) {
+    public Rectangle(double length, double width) {
         this.length = length;
         this.width = width;
     }
@@ -16,10 +16,10 @@ public class Rectangle {
     // - area = length x width
     // - perimeter = 2 x length + 2 x width
     public double getArea() {
-        return this.length * this.width;
+        return length * width;
     }
 
     public double getPerimeter() {
-        return (2 * this.length) + (2 * this.width);
+        return (2 * length) + (2 * width);
     }
 }
