@@ -21,22 +21,22 @@ public class Input {
 
     public static int getInt() {
         try {
-            scanner.nextInt();
+            Integer.valueOf(getString());
         } catch(NumberFormatException e) {
             System.out.println("Error: " + e.getMessage());
             System.out.println("Please enter a number with the data type of integer.");
         }
-        return scanner.nextInt();
+        return Integer.valueOf(getString());
     }
 
     public static double getDouble() {
         try {
-            scanner.nextDouble();
+            Double.valueOf(getString());
         } catch(NumberFormatException e) {
             System.out.println("Error: " + e.getMessage());
             System.out.println("Please enter a number with the data type of double.");
         }
-        return scanner.nextDouble();
+        return Double.valueOf(getString());
     }
 
     public static int getInt(int min, int max) {
@@ -57,3 +57,5 @@ public class Input {
         return userNum;
     }
 }
+
+// System.getProperty("user.dir");
